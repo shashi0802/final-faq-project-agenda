@@ -1,0 +1,157 @@
+ body {
+     background-color: #F9F9F9;
+}
+ p{
+     margin: 10px 0;
+}
+.loader {
+     position: fixed;
+     left: 0px;
+     top: 0px;
+     width: 100%;
+     height: 100%;
+     z-index: 9999;
+     /*background: url('images/loader-image.gif') 50% 50% no-repeat rgb(249,249,249, 0.8);
+     background-size: 15%;*/
+     background-image: url('images/loader-image.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(249,249,249, 0.8);
+    background-size: 15%;
+}
+ .wrapper{
+     margin: 30px 0;
+}
+ .container .session-list-items {
+/*     margin: 30px 0 0;*/
+}
+ .container .session-list-items ul {
+     margin-bottom: 15px;
+     clear: both;
+     overflow: hidden;
+     padding: 0;
+}
+ .container .session-list-items ul li {
+     border-left:3px solid #85bb42;
+     clear: both;
+     overflow: hidden;
+     padding: 15px;
+     margin-bottom: 20px;
+     background-color: #e8e7e7;
+     border-radius: 5px;
+}
+ .container .session-list-items ul li:hover {
+     background-color: #dedede;
+}
+.container .session-list-items ul li .actionName{
+    font-size: 20px;
+    color: #3c3c3c;
+}
+ .container .session-list-items ul li .image {
+     width: 20%;
+     border-radius: 50%;
+     float: left;
+     height: 196px;
+}
+ .container .session-list-items ul li .image img {
+     width: 100%;
+     height: auto;
+     border-radius: 50%;
+}
+ .container .session-list-items ul li .article {
+     width: auto;
+     border-bottom: 1px solid #ccc;
+     padding-bottom: 25px;
+     color: #858585;
+}
+ .container .session-list-items ul li .title {
+     display: block;
+     font-size: 16px;
+     margin-bottom: 5px;
+     color: #000;
+     font-weight: 700;
+}
+ .container .session-list-items ul li .speaker {
+     display: block;
+     font-size: 16px;
+     margin: 10px 0;
+     color: #858585;
+}
+ .container .visit-btn a{
+     border: 1px solid #9d9d9d;
+     padding: 8px;
+     width: 153px;
+     display: inline-block;
+     background-color: #ddd;
+     margin: 20px 0;
+}
+ .visit-btn a:hover{
+     text-decoration: none;
+}
+ .visit-btn .visit-btn-left{
+     float: left;
+     text-align: center;
+}
+ .visit-btn .visit-btn-right button {
+     float: right;
+     text-align: center;
+}
+ .session-detail-title{
+     display: none;
+}
+.session-item-detail{
+    display: none;
+    margin: 20px;
+    background-color: #e8e8e8;
+    padding: 20px;
+    border-radius: 5px;
+}
+.session-item-detail p{
+    font-size: 16px;
+    margin: 0 0 15px;
+}
+.session-item-detail p:last-child{
+    margin: 0;
+}
+.session-item-detail p span{
+    font-weight: 600;
+    font-size: 18px;
+}
+.session-item-detail .backLink{
+    position: absolute;
+    top: 27px;
+    border-radius: 20px;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    height: 42px;
+    width: 111px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px #888888;
+    color: #888888;
+    line-height: 42px;
+}
+ .session-list-title {
+    display: none;
+    margin: 50px 0 20px;
+}
+ #session_button {
+    display: none;
+    border-radius: 20px;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    height: 42px;
+    width: 111px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px #888888;
+    color: #888888;
+}
