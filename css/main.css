@@ -1,5 +1,5 @@
 body{
-    background-color: #212121;
+    background-color: #F5F5F5;
 }
 .bg{
     background-color: #111111;
@@ -9,11 +9,40 @@ body{
 #backcol{
     background-color: #212121;
 }
+.cont-colo{
+    background-color: #FFFFFF;
+}
 #main{
     color: #ffffff;
 }
 #main h1{
     padding: 0 20px;
+}
+
+.registration .sign-link{
+    position: absolute;
+    right: 8%;
+    top: 20px;
+    font-size: 17px;
+    cursor: pointer;
+
+
+}
+.registration span a{
+ color: #e57a00;
+ text-decoration: none;
+}
+
+.author{
+    border-left: 1px solid #000000; 
+    padding: 10px;
+}
+
+.signin{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 14px;
+    font-family: "Fira Sans", "Helvetica", "Arial", sans-serif;
 }
 
 .day{
@@ -41,10 +70,17 @@ body{
 .activity{
     background-color: #282828;
 }
-#time{
-    padding: 30px;
-    border-right: 0.25px solid #424242;
+.time{
+    padding: 10px;
+    
+}
+
+.time h6 {
     color: #e57a00;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    font-size: 14px;
 }
 
 .title{
@@ -52,6 +88,11 @@ body{
 }
 .title h1{
     cursor: pointer;
+}
+
+h1{
+padding: 28px 0;
+
 }
 
 .detail{
@@ -134,7 +175,11 @@ body{
 }
 .author-name {
     
-    cursor: pointer;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    color: #787878 !important;
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif !important;
+    line-height: 1.71429em !important;
    
 }
 #author-row{
@@ -143,6 +188,7 @@ body{
 #author-description{
     max-height: 500px;
     overflow-y: auto;
+    margin-left: 10px;
 }
 .author-para{
     padding: 10px;
@@ -159,6 +205,10 @@ body{
 }
 .activity-name{
     padding-top: 15px;
+    font-size: 18px;
+    color: #555555;
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+    line-height: 1.71429em;
 }
 .author-data{
     margin-top: 5px;
@@ -170,4 +220,318 @@ body{
 #img-content{
     margin-right: 0px !important;
     margin-left: 0px !important;
+}
+
+
+
+
+/* css of signin page */
+.slide-color{
+    background-color: #457df3;
+    color: #fff;
+}
+.box-shadow{
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+.slide-color h2{
+    font-size: 1.3125rem;
+    font-weight: 500;
+    font-family: "Fira Sans", "Helvetica", "Arial", sans-serif;
+    line-height: 1.16667em;
+    padding: 16px;
+}
+
+/* code for body */
+.signin-container{
+    max-width: 400px;
+    margin: auto;
+}
+.container-size{
+    margin-top: 16px;
+    padding: 16px;
+}
+form{
+    margin: 10px;
+}
+form input[type=text]{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #6c757d; 
+}
+#email-err{
+    display: none;
+    color: #ff1744;
+    margin: 0;
+    font-size: 0.75rem;
+    text-align: left;
+    margin-top: 8px;
+    min-height: 1em;
+    font-family: "Fira Sans", "Helvetica", "Arial", sans-serif;
+    line-height: 1em;
+}
+form input[type=password]{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #6c757d; 
+}
+#password-err{
+    display: none;
+    color: #ff1744;
+    margin: 0;
+    font-size: 0.75rem;
+    text-align: left;
+    margin-top: 8px;
+    min-height: 1em;
+    font-family: "Fira Sans", "Helvetica", "Arial", sans-serif;
+    line-height: 1em;
+}
+form input:hover{
+    border: none;
+    border-bottom: 2px solid #000;
+}
+
+.email-data{
+    padding-left: 10px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+.pass-data{
+    padding-left: 10px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+.label{
+    display: none;
+    color: #457df3;
+}
+
+.forgot{
+    color: #457df3;
+    padding-left: 10px;
+    font-size: 14px;
+    font-family: "Fira Sans", "Helvetica", "Arial", sans-serif;
+    cursor: pointer;
+    font-weight: bold;
+}
+.forgot a{
+    text-decoration: none;
+    color: #457df3;
+}
+.forgot:hover{
+    color: #155bf0;
+}
+
+/* button */
+.sub-btn{
+    max-width: 100px;
+    margin: 32px auto;
+    display: block;
+}
+.sub-btn a{
+    text-align: center;
+    background-color: #457df3;
+    padding: 8px 25px;
+    line-height: 1.4rem;
+    font-family: "Fira Sans", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #fff;
+
+}
+.sub-btn a:hover{
+    background-color:#155bf0;
+    color: #fff;
+    text-decoration: none;
+}
+
+.signin{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 14px;
+    font-family: "Fira Sans", "Helvetica", "Arial", sans-serif;
+}
+
+/* social media */
+.social-media{
+    max-width: 300px;
+    margin: 8px auto;
+}
+.social-media button{
+    text-align: center;
+    background: none;
+    border: none;
+    color: #155bf0;
+    padding: 8px 16px;
+}
+.social-media button a{
+    color: #155bf0;
+}
+.social-media button:hover{
+    background-color: rgba(69, 125, 243, 0.08);
+}
+.social-media button a:hover{
+    text-decoration: none;
+}
+/* footer code */
+.footer-container{
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+}
+.cont-ali{
+    margin-bottom: 8px;
+}
+.cont-ali p{
+    color: #bdbdbd;
+    font-size: 10px;
+    margin-top: 8px;
+    font-weight: 400;
+    font-family: "Fira Sans", "Helvetica", "Arial", sans-serif;
+    line-height: 1.46429em;
+}
+
+
+/* css for forgot page */
+
+/* forgot page */
+.slide-color{
+    background-color: #457df3;
+    color: #fff;
+}
+.box-shadow{
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+.arrow{
+    flex: 0 0 auto;
+    width: 48px;
+    height: 48px;
+    padding-top: 10px;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-align: center;
+}
+.arrow a{
+    color: #fff;
+    font-size: 26px;
+}
+.forgot-container .arrow:hover{
+    border-radius: 50%;
+    background-color: #155bf0;
+}
+.slide-color h2{
+    padding-top: 16px;
+    font-weight: 500;
+    font-family: "Fira Sans", "Helvetica", "Arial", sans-serif;
+    line-height: 1.16667em;
+    width: 90% !important;
+    margin-bottom: 0;
+}
+.vertical-dots{
+    position: relative;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 48px;
+    width: 48px;
+    text-align: center;
+}
+.vert-dots{
+    position: absolute;
+    right: 20px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 10px 0px #fff, 0px 20px 0px #fff;
+}
+.vertical-dots:hover{
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #155bf0;
+}
+.notification{
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    z-index: 1;
+    right: 10px;
+    top: 15px;
+    border-radius: 4px;
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.notification ul{
+    padding: 20px 0;
+}
+.notification ul li{
+    color: rgba(0, 0, 0, 0.87);
+    height: auto;
+    overflow: hidden;
+    font-weight: 400;
+    line-height: 1.5em;
+    font-family: "Fira Sans", "Helvetica", "Arial", sans-serif;
+    white-space: nowrap;
+    padding: 10px 10px;
+}
+.notification ul li a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.87);
+    height: auto;
+    overflow: hidden;
+    font-weight: 400;
+    line-height: 1.5em;
+    font-family: "Fira Sans", "Helvetica", "Arial", sans-serif;
+    white-space: nowrap;
+    padding: 10px 10px;
+}
+.notification ul li i{
+    padding: 5px;
+}
+.notification ul li:hover{
+    background-color: #EBEBEB;
+    cursor: pointer;
+}
+
+/* body code */
+.forgot-main{
+    max-width: 400px;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+.main-container{
+    margin: 30px;
+}
+form input[type=email]{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #6c757d; 
+}
+.main-container label{
+    display: none;
+}
+
+/* botton */
+.sub-btn{
+    max-width: 170px;
+    margin: 32px auto;
+    display: block;
+}
+.sub-btn a{
+    text-align: center;
+    background-color: #457df3;
+    padding: 8px 25px;
+    line-height: 1.4rem;
+    font-family: "Fira Sans", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 4px;
+    color: #fff;
+
+}
+.sub-btn a:hover{
+    background-color:#155bf0;
+    color: #fff;
+    text-decoration: none;
 }
