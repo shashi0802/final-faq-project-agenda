@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-auth.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+  <script src="./js/main.js"></script>
+  <script>
+
+    function myFunction() {
+
+      // Initialize Firebase
+      const config = {
+        apiKey: "AIzaSyAxpstPbIDrfqpgqepagFZbNlH1z6QsbuY",
+        authDomain: "conference-app-b44e3.firebaseapp.com",
+        databaseURL: "https://conference-app-b44e3.firebaseio.com",
+        projectId: "conference-app-b44e3",
+        storageBucket: "conference-app-b44e3.appspot.com",
+        messagingSenderId: "601732749125"
+      };
+
+      firebase.initializeApp(config);
+
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(email, password)
+        .then(function (data) {
+          reset.email
+          console.log("successfullll yeh call hogaya...........");
+        }).catch(function (error) {
+          // Handle Errors here.
+          console.log("Error ==============", error);
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // ...
+        });
+
+    }
+
+  </script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="signin-container container-size">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <!-- <div class="email-data"> -->
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+      <!-- </div> -->
+      <!-- <div class="pass-data"> -->
+        <br>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="password" required>
+      <!-- </div> -->
+      <div class="clearfix">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <button class="signupbtn" onclick="myFunction()">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

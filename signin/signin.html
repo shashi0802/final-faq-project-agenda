@@ -1,0 +1,103 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-auth.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+<script src="./js/main.js"></script>
+
+<script type="text/javascript">
+  function myFunction() {
+ 
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value
+
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAxpstPbIDrfqpgqepagFZbNlH1z6QsbuY",
+    authDomain: "conference-app-b44e3.firebaseapp.com",
+    databaseURL: "https://conference-app-b44e3.firebaseio.com",
+    projectId: "conference-app-b44e3",
+    storageBucket: "conference-app-b44e3.appspot.com",
+    messagingSenderId: "601732749125"
+  };
+
+  firebase.initializeApp(config);
+    firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(function(data) {
+          console.log("successfullll yeh call hogaya...........");
+      }).catch(function(error) {
+            // Handle Errors here.
+            console.log("Error ==============", error);
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // ...
+});
+  }
+</script>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="container-fluid slide-color">
+            <div class="row box-shadow">
+                <h2>SlidesUp</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- signin page -->
+    <div class="signin-container container-size">
+        <div name="form1">
+            <div class="email-data">
+                <label for="email" class="label">Email</label>
+                <input type="text" name="text1" id="email" autocomplete="off" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
+                <p id="email-err">Email is not a valid email</p>
+            </div>
+            <div class="pass-data">
+                <label for="password" class="label">Password</label>
+                <input type="password" id="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
+                <p id="password-err">Password can't be blank</p>
+            </div>
+            <span class="forgot"><a href="forgot.html">Forgot password?</a></span>
+            <div class="sub-btn">
+                <!-- <a href="#">Sign In</a> -->
+                <input type="submit" name="submit" id="sign-inBtn" value="Sign In" onclick="myFunction()"/>
+            </div>
+            <h6 class="signin">or sign in with</h6>
+            <div class="social-media">
+                <!-- <div class="row "> -->
+                    <button>
+                        <span><a href="https://accounts.google.com/signin">Google</a></span>
+                    </button>
+                    <button>
+                        <span><a href="https://www.twitter.com">Twitter</a></span>
+                    </button>
+                    <button>
+                        <span><a href="https://www.facebook.com">Facebook</a></span>
+                    </button>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- footer code -->
+    <footer>
+        <div class="footer-container cont-ali">
+            <p>Copyright © 2018 SlidesUp. All Rights Reserved.<br>SlidesUp 1.4.7 (Test)</p>
+        </div>
+    </footer>
+</body>
+
+</html>
